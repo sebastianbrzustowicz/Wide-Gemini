@@ -1,11 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "PokeballImages",
+    "manifest_version": 2,
+    "name": "Wide Gemini",
     "version": "1.0.0",
     "content_scripts": [
-        {
-          "matches": ["https://www.youtube.com/*"],
-          "js": ["Content.js"]
-        }
-    ]
-}
+      {
+        "matches": ["https://gemini.google.com/*", "https://gemini.google.com/*/*"],
+        "js": ["Content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+      }
+  }
