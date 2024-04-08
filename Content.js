@@ -53,8 +53,6 @@ let geminiWidth = 100;
             container.style.maxWidth = geminiWidth + '%';
             container.style.minWidth = '20%';
           });
-        } else {
-          console.warn('No target elements found. Check your CSS selector.');
         }
       })();
 
@@ -67,8 +65,6 @@ let geminiWidth = 100;
             container.style.maxWidth = geminiWidth + '%';
             container.style.minWidth = '50%';
           });
-        } else {
-          console.warn('No target elements found. Check your CSS selector.');
         }
       })();
 
@@ -81,8 +77,6 @@ let geminiWidth = 100;
             container.style.maxWidth = geminiWidth + '%';
             container.style.minWidth = '50%';
           });
-        } else {
-          console.warn('No target elements found. Check your CSS selector.');
         }
       })();
 
@@ -94,8 +88,6 @@ let geminiWidth = 100;
             container.style.height = '150px';
             container.style.maxHeight = '150px';
           });
-        } else {
-          console.warn('No target elements found. Check your CSS selector.');
         }
       })();
   }
