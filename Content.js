@@ -45,7 +45,7 @@ let geminiWidth = 100;
   function changeElementsSize() {
 
     (function() {
-        const conversationContainers = document.querySelectorAll('.conversation-container[_ngcontent-ng-c3122644187]');
+      const conversationContainers = document.querySelectorAll('.conversation-container.ng-star-inserted');
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
@@ -57,7 +57,7 @@ let geminiWidth = 100;
       })();
 
       (function() {
-        const conversationContainers = document.querySelectorAll('.input-area-container[_ngcontent-ng-c3122644187]');
+        const conversationContainers = document.querySelectorAll('.input-area-container.ng-tns-c3785935164-1.ng-star-inserted');
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
@@ -69,7 +69,7 @@ let geminiWidth = 100;
       })();
 
       (function() {
-        const conversationContainers = document.querySelectorAll('.bottom-container[_ngcontent-ng-c3122644187]');
+        const conversationContainers = document.querySelectorAll('.bottom-container.ng-star-inserted');
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
@@ -81,12 +81,12 @@ let geminiWidth = 100;
       })();
 
       (function() {
-        const conversationContainers = document.querySelectorAll('.text-input-field[_ngcontent-ng-c1980972506]');
+        const conversationContainers = document.querySelectorAll('.text-input-field');
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
-            container.style.height = '150px';
-            container.style.maxHeight = '150px';
+            container.style.height = '120px';
+            container.style.maxHeight = '120px';
           });
         }
       })();
