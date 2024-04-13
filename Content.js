@@ -57,7 +57,7 @@ let geminiWidth = 100;
       })();
 
       (function() {
-        const conversationContainers = document.querySelectorAll('.input-area-container.ng-tns-c3785935164-1.ng-star-inserted');
+        const conversationContainers = document.querySelectorAll('.input-area-container.ng-star-inserted');
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
@@ -85,8 +85,8 @@ let geminiWidth = 100;
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
-            container.style.height = '120px';
-            container.style.maxHeight = '120px';
+            container.style.height = 'auto';
+            container.style.minHeight = '120px';
           });
         }
       })();
