@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Wide Gemini",
     "version": "1.0.0",
     "content_scripts": [
@@ -8,7 +8,7 @@
         "js": ["Content.js"]
       }
     ],
-    "browser_action": {
+    "action": {
       "default_popup": "popup.html"
     },
     "icons": {

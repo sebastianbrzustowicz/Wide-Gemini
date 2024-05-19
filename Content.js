@@ -1,4 +1,4 @@
-let geminiWidth = 100;
+let geminiWidth = 2210;
 
 (function() {
     const sliderContainer = document.createElement('div');
@@ -8,7 +8,7 @@ let geminiWidth = 100;
     document.body.appendChild(sliderContainer);
   
     const sliderMarkup = `
-      <input type="range" min="0" max="100" value="100" class="slider">
+      <input type="range" min="50" max="3000" value="2210" class="slider">
     `;
   
     sliderContainer.innerHTML = sliderMarkup;
@@ -18,6 +18,7 @@ let geminiWidth = 100;
     slider.addEventListener('input', (event) => {
       const currentValue = event.target.value;
       geminiWidth = currentValue;
+      console.log(geminiWidth);
       changeElementsSize();
     });
   
@@ -26,7 +27,7 @@ let geminiWidth = 100;
       .slider-container {
         position: fixed;
         top: 10px;
-        right: 100px;
+        right: 300px;
         width: 10%;
         height: 50px;
         z-index: 100;
@@ -49,9 +50,9 @@ let geminiWidth = 100;
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
-            container.style.width = geminiWidth + '%'; 
-            container.style.maxWidth = geminiWidth + '%';
-            container.style.minWidth = '20%';
+            container.style.width = geminiWidth + 'px'; 
+            container.style.maxWidth = '100%';
+            container.style.minWidth = '30%';
           });
         }
       })();
@@ -61,9 +62,9 @@ let geminiWidth = 100;
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
-            container.style.width = geminiWidth + '%';
-            container.style.maxWidth = geminiWidth + '%';
-            container.style.minWidth = '50%';
+            container.style.width = geminiWidth + 'px';
+            container.style.maxWidth = '100%';
+            container.style.minWidth = '55%';
           });
         }
       })();
@@ -73,9 +74,9 @@ let geminiWidth = 100;
       
         if (conversationContainers.length > 0) {
           conversationContainers.forEach((container) => {
-            container.style.width = geminiWidth + '%';
-            container.style.maxWidth = geminiWidth + '%';
-            container.style.minWidth = '50%';
+            container.style.width = geminiWidth + 'px';
+            container.style.maxWidth = '100%';
+            container.style.minWidth = '55%';
           });
         }
       })();
