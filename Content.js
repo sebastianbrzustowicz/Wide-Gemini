@@ -1,4 +1,4 @@
-let geminiWidth = 2210;
+let geminiWidth = 5000;
 
 (function() {
     const sliderContainer = document.createElement('div');
@@ -8,7 +8,7 @@ let geminiWidth = 2210;
     document.body.appendChild(sliderContainer);
   
     const sliderMarkup = `
-      <input type="range" min="50" max="3000" value="2210" class="slider">
+      <input type="range" min="50" max="5000" value="5000" class="slider">
     `;
   
     sliderContainer.innerHTML = sliderMarkup;
