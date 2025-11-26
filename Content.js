@@ -1,100 +1,46 @@
-let geminiWidth = 5000;
+// Content.js - 팝업의 신호를 받아 실제 페이지 너비를 변경합니다.
 
-(function() {
-    const sliderContainer = document.createElement('div');
-    sliderContainer.classList.add('slider-container');
-  
-    // Add slider to body
-    document.body.appendChild(sliderContainer);
-  
-    const sliderMarkup = `
-      <input type="range" min="50" max="5000" value="5000" class="slider">
+// 너비를 적용하는 함수
+function applyWidth(width) {
+    const styleId = 'gemini-wide-style';
+    let styleTag = document.getElementById(styleId);
+
+    if (!styleTag) {
+        styleTag = document.createElement('style');
+        styleTag.id = styleId;
+        document.head.appendChild(styleTag);
+    }
+
+    // CSS를 사용하여 너비 강제 적용 (최신 Gemini 클래스 반영)
+    styleTag.textContent = `
+        /* 대화 영역 및 하단 입력창 너비 조절 */
+        .conversation-container,
+        .bottom-container,
+        main > div:has(.conversation-container) {
+            max-width: ${width}px !important;
+            width: 100% !important;
+        }
+        
+        /* 입력창 내부 요소 너비 맞춤 */
+        .input-area-container, form {
+             max-width: ${width}px !important;
+             width: 100% !important;
+             margin: 0 auto !important; /* 중앙 정렬 */
+        }
     `;
-  
-    sliderContainer.innerHTML = sliderMarkup;
+    console.log(`Gemini width set to ${width}px`);
+}
 
-    const slider = sliderContainer.querySelector('.slider');
+// 1. 팝업에서 보내는 메시지 수신 리스너
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.action === "setWidth") {
+        applyWidth(request.width);
+    }
+});
 
-    slider.addEventListener('input', (event) => {
-      const currentValue = event.target.value;
-      geminiWidth = currentValue;
-      console.log(geminiWidth);
-      changeElementsSize();
-    });
-  
-    const styleElement = document.createElement('style');
-    styleElement.textContent = `
-      .slider-container {
-        position: fixed;
-        top: 10px;
-        right: 300px;
-        width: 10%;
-        height: 50px;
-        z-index: 100;
-      }
-  
-      .slider {
-        width: 100%;
-        height: 100%;
-      }
-    `;
-  
-    document.head.appendChild(styleElement);
-  
-  })();
-
-  function changeElementsSize() {
-
-    (function() {
-      const conversationContainers = document.querySelectorAll('.conversation-container.ng-star-inserted');
-      
-        if (conversationContainers.length > 0) {
-          conversationContainers.forEach((container) => {
-            container.style.width = geminiWidth + 'px'; 
-            container.style.maxWidth = '100%';
-            container.style.minWidth = '30%';
-          });
-        }
-      })();
-
-      (function() {
-        const conversationContainers = document.querySelectorAll('.input-area-container.ng-star-inserted');
-      
-        if (conversationContainers.length > 0) {
-          conversationContainers.forEach((container) => {
-            container.style.width = geminiWidth + 'px';
-            container.style.maxWidth = '100%';
-            container.style.minWidth = '55%';
-          });
-        }
-      })();
-
-      (function() {
-        const conversationContainers = document.querySelectorAll('.bottom-container.ng-star-inserted');
-      
-        if (conversationContainers.length > 0) {
-          conversationContainers.forEach((container) => {
-            container.style.width = geminiWidth + 'px';
-            container.style.maxWidth = '100%';
-            container.style.minWidth = '55%';
-          });
-        }
-      })();
-
-      (function() {
-        const conversationContainers = document.querySelectorAll('.text-input-field');
-      
-        if (conversationContainers.length > 0) {
-          conversationContainers.forEach((container) => {
-            container.style.height = 'auto';
-            container.style.minHeight = '120px';
-          });
-        }
-      })();
-  }
-  
-setTimeout(changeElementsSize, 1000);
-
-setInterval(() => changeElementsSize(), 50);
-
-  
+// 2. 페이지 로드 시 초기 설정값 적용
+chrome.storage.local.get(['geminiWidth'], function(result) {
+    // 저장된 값이 있으면 적용, 없으면 기본값 600px 적용
+    const initialWidth = result.geminiWidth || 600;
+    applyWidth(initialWidth);
+});

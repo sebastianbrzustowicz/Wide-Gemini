@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wide Gemini</title>
+    <style>
+        body {
+            width: 250px;
+            padding: 15px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        h3 { margin-top: 0; color: #333; }
+        input[type=range] {
+            width: 100%;
+            margin: 15px 0;
+        }
+    </style>
 </head>
-<body style="background-color: black; font-size: 1.2em; width: 350px;">
-    <p id="extensionDiv" style="color:white; font-weight: bold; font-size: 1.5em; margin-left: 15px;">Wide Gemini extension</p>
-
-<div style="margin-left: 25%;">
-    <a href="https://buycoffee.to/sebastianbrzustowicz" target="_blank"><img src="https://agnieszkacytacka.com/wp-content/uploads/2023/04/GIF-4.gif" style="width: 150px" alt="Buy coffee.to"></a>
-</div>
-
+<body>
+    <h3>Gemini 너비 조절</h3>
+    <input type="range" id="widthSlider" min="600" max="1800" value="900" step="10">
+    <p>슬라이더를 움직여 조절하세요.</p>
+    
+    <script src="popup.js"></script>
 </body>
 </html>

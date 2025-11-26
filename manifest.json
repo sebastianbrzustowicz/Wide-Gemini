@@ -1,19 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Wide Gemini",
-    "version": "1.0.0",
-    "content_scripts": [
-      {
-        "matches": ["https://gemini.google.com/*", "https://gemini.google.com/*/*"],
-        "js": ["Content.js"]
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "icons": {
-        "16": "logo.png",
-        "48": "logo.png",
-        "128": "logo.png"
-      }
-  }
+  "manifest_version": 3,
+  "name": "Wide-Gemini-Popup Mode",
+  "version": "1.1.0",
+  "description": "Gemini 너비를 팝업 메뉴로 조절합니다.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "logo.png"
+    }
+  },
+  "icons": {
+    "128": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["Content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ]
+}
