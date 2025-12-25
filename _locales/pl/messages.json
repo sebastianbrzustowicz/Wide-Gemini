@@ -1,0 +1,11 @@
+{
+  "extensionDescription": {
+    "message": "Reguluj szerokość Gemini za pomocą przesuwaka w pop-up menu."
+  },
+  "popupTitle": {
+    "message": "Dostosuj szerokość Gemini"
+  },
+  "popupHint": {
+    "message": "Użyj przesuwaka aby dopasować szerokość."
+  }
+}

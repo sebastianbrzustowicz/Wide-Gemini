@@ -1,0 +1,11 @@
+{
+  "extensionDescription": {
+    "message": "Adjust the Gemini width using the pop-up menu."
+  },
+  "popupTitle": {
+    "message": "Adjust Gemini width"
+  },
+  "popupHint": {
+    "message": "Use the slider to adjust the width."
+  }
+}

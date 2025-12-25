@@ -1,0 +1,11 @@
+{
+  "extensionDescription": {
+    "message": "팝업 메뉴를 사용하여 Gemini 너비를 조정하십시오."
+  },
+  "popupTitle": {
+    "message": "Gemini 너비 조절"
+  },
+  "popupHint": {
+    "message": "슬라이더를 움직여 조절하세요."
+  }
+}

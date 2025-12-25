@@ -17,9 +17,14 @@
     </style>
 </head>
 <body>
-    <h3>Gemini 너비 조절</h3>
+    <h3 id="title">Gemini Width</h3>
     <input type="range" id="widthSlider" min="600" max="1800" value="900" step="10">
-    <p>슬라이더를 움직여 조절하세요.</p>
+    <p id="hint">Use the slider to adjust width.</p>
+
+    <label style="display: flex; align-items: center; justify-content: center; margin: 10px auto 0 auto; gap: 8px;">
+        <span>Clean view</span>
+        <input type="checkbox" id="cleanView">
+    </label>
     
     <script src="popup.js"></script>
 </body>

@@ -1,0 +1,11 @@
+{
+  "extensionDescription": {
+    "message": "使用弹出菜单调整 Gemini 的宽度。"
+  },
+  "popupTitle": {
+    "message": "调整 Gemini 宽度"
+  },
+  "popupHint": {
+    "message": "使用滑块进行调整。"
+  }
+}
