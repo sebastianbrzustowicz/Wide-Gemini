@@ -63,8 +63,8 @@ chrome.runtime.onMessage.addListener(function(request) {
 
 // 페이지 로드 시 저장된 설정을 즉시 적용
 chrome.storage.local.get(['geminiWidth', 'cleanView'], function(result) {
-    const initialWidth = result.geminiWidth || 600;
-    const cleanView = result.cleanView || false;
+    const initialWidth = result.geminiWidth || 1800;
+    const cleanView = result.cleanView || true;
 
     applyWidth(initialWidth);
     observeDOM(cleanView);
