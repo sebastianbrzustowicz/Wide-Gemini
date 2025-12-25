@@ -1,6 +1,7 @@
 # Wide-Gemini
 
-Extension for Gemini extension. It is possible to adjust the width with a slider.
+Extension for Gemini extension. It is possible to adjust the width with a slider.   
+Additionally, you can enable "Clean View" to hide extra page elements for a cleaner interface.
 
 ## Before
 
