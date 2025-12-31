@@ -21,6 +21,12 @@ function applyWidth(width) {
             width: 100% !important;
         }
 
+        /* user-query w środku conversation-container */
+        .conversation-container user-query {
+            max-width: ${width}px !important;
+            width: 100% !important;
+        }
+
         /* 입력창 내부 요소 너비 맞춤 */
         .input-area-container, form {
             max-width: ${width}px !important;
@@ -35,7 +41,9 @@ function applyVisibility(hide) {
     const selectors = [
         '.desktop-ogb-buffer',
         '.buttons-container.adv-upsell.ng-star-inserted',
-        '.gds-label-m-alt.desktop-spacing.ng-star-inserted'
+        '.gds-label-m-alt.desktop-spacing.ng-star-inserted',
+        '.boqOnegoogleliteOgbOneGoogleBar',
+        '.top-bar-actions'
     ];
     selectors.forEach(selector => {
         const els = document.querySelectorAll(selector);
