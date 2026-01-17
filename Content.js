@@ -28,9 +28,15 @@ function applyWidth(width) {
         }
 
         /* 입력창 내부 요소 너비 맞춤 */
-        .input-area-container, form {
+        .input-area-container:not(.is-zero-state), form {
             max-width: ${width}px !important;
             width: 100% !important;
+            margin: 0 auto !important;
+        }
+
+        .input-area-container.is-zero-state {
+            max-width: ${width}px !important;
+            width: 95% !important;
             margin: 0 auto !important;
         }
     `;
