@@ -39,6 +39,10 @@ function applyWidth(width) {
             width: 95% !important;
             margin: 0 auto !important;
         }
+
+        [class*="user-query-container"] {
+            padding-bottom: 0px !important;
+        }
     `;
 }
 
