@@ -5,11 +5,11 @@ Additionally, you can enable "Clean View" to hide extra page elements for a clea
 
 ## Before
 
-![Before](https://github.com/sebastianbrzustowicz/Wide-Gemini/assets/66909222/3ed0b096-c83b-43ff-aa49-88d93627d925)
+<img width="2556" height="1419" alt="Before" src="https://github.com/user-attachments/assets/218424b9-5a74-4796-a168-0adf20f5b2f2" />
 
 ## After
 
-![After](https://github.com/sebastianbrzustowicz/Wide-Gemini/assets/66909222/423adf9b-125f-4653-b8fe-658d6975d746)
+<img width="2556" height="1419" alt="After" src="https://github.com/user-attachments/assets/643c19bf-0edf-43ca-a481-3ee446782d89" />
 
 ## License
 
