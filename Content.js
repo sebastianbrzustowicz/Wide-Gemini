@@ -15,10 +15,10 @@ function applyWidth(width) {
     styleTag.textContent = `
         /* 대화 영역 및 하단 입력창 너비 조절 */
         .conversation-container,
-        .bottom-container,
-        main > div:has(.conversation-container) {
+        .bottom-container {
             max-width: ${width}px !important;
             width: 100% !important;
+            margin: 0 auto !important;
         }
 
         /* user-query w środku conversation-container */
@@ -58,7 +58,7 @@ function applyVisibility(hide) {
     ];
     selectors.forEach(selector => {
         const els = document.querySelectorAll(selector);
-        els.forEach(el => el.style.display = hide ? 'none' : 'block');
+        els.forEach(el => el.style.display = hide ? 'none' : '');
     });
 }
 
