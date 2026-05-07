@@ -43,6 +43,10 @@ function applyWidth(width) {
         [class*="user-query-container"] {
             padding-bottom: 0px !important;
         }
+
+        .table-block.new-table-style {
+            max-width: 100% !important;
+        }
     `;
 }
 
