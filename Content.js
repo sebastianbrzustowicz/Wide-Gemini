@@ -47,6 +47,25 @@ function applyWidth(width) {
         .table-block.new-table-style {
             max-width: 100% !important;
         }
+
+        /* sticky buttons */
+        [class*="formatted-code-block"],
+        [class*="animated-opacity"] {
+            overflow: visible !important;
+        }
+
+        [class*="code-block"] [class*="code-block-decoration"],
+        .code-block-decoration.header-formatted {
+            position: sticky !important;
+            top: -46px !important;
+            z-index: 10 !important;
+        }
+
+        /* top shadow removal */
+        [class*="chat-history-scroll-container"] {
+            -webkit-mask-image: none !important;
+            mask-image: none !important;
+        }
     `;
 }
 
