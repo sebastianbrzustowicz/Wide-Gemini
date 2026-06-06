@@ -66,6 +66,39 @@ function applyWidth(width) {
             -webkit-mask-image: none !important;
             mask-image: none !important;
         }
+
+
+        .table-footer {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+        }
+
+        .custom-copy-buttons-container {
+            display: flex;
+            gap: 6px;
+        }
+
+        .gemini-custom-copy-btn {
+            background-color: var(--lumi-sys-color--surface-dim);
+            border: none;
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .gemini-custom-copy-btn:hover {
+            opacity: 0.85;
+        }
+
+        .gemini-custom-copy-btn:active {
+            transform: scale(0.95);
+        }
     `;
 }
 
@@ -87,10 +120,14 @@ function applyVisibility(hide) {
 
 // DOM 변화를 관찰하고 cleanView가 활성화되었을 때 요소를 즉시 적용하는 함수
 function observeDOM(cleanView) {
-    const observer = new MutationObserver(() => applyVisibility(cleanView));
+    const observer = new MutationObserver(() => { 
+        applyVisibility(cleanView);
+        injectTableButtons();
+    });
     observer.observe(document.body, { childList: true, subtree: true });
     // 페이지 로드 시 바로 적용
     applyVisibility(cleanView);
+    injectTableButtons();
 }
 
 // popup.js로부터 메시지 수신 리스너
