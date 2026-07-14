@@ -99,6 +99,21 @@ function applyWidth(width) {
         .gemini-custom-copy-btn:active {
             transform: scale(0.95);
         }
+
+        [class*="enable-luminous-edit-box-updates"] [class*="edit-form"],
+        [class*="user-query-bubble-with-background"]:not(.edit-mode) {
+            max-width: 100% !important;
+        }
+
+        @media screen and (min-width: 960px) {
+            .chat-history.lm [class*="user-query-container"] {
+                width: 100% !important;
+            }
+        }
+
+        [class*="enable-luminous-fast-follows"] [class*="user-query-bubble-with-background"].luminous-collapsed {
+            width: 100% !important;
+        }
     `;
 }
 
