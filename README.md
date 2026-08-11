@@ -24,6 +24,16 @@ The extension also includes numerous quality-of-life improvements, such as a sti
 
 <img width="2556" height="1419" alt="After" src="https://github.com/user-attachments/assets/643c19bf-0edf-43ca-a481-3ee446782d89" />
 
+## Installation
+
+- Go to chrome://extensions
+- Enable "Developer mode"
+- Click **Load unpacked** and select the extracted directory
+
+<sub>For more details, see the original discussion in this issue: [How to install?
+ #1
+](https://github.com/sebastianbrzustowicz/Wide-Gemini/issues/1).</sub>
+
 ## License
 
 Wide-Gemini is released under the MIT license.
