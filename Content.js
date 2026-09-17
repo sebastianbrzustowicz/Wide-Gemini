@@ -105,6 +105,11 @@ function applyWidth(width) {
             max-width: 100% !important;
         }
 
+        /* Gemini UI change (Sep 2026): markdown blocks capped at 708px */
+        [class*="enable-extended-and-xl-grid"] .md-content > *:not(#_) {
+            max-width: 100% !important;
+        }
+
         @media screen and (min-width: 960px) {
             .chat-history.lm [class*="user-query-container"] {
                 width: 100% !important;
