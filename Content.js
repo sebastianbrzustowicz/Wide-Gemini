@@ -105,9 +105,31 @@ function applyWidth(width) {
             max-width: 100% !important;
         }
 
-        /* Gemini UI change (Sep 2026): markdown blocks capped at 708px */
+        /* Gemini UI change (Sep 2026): markdown and chat blocks capped at 708px */
         [class*="enable-extended-and-xl-grid"] .md-content > *:not(#_) {
             max-width: 100% !important;
+        }
+
+        [class*="enable-extended-and-xl-grid"] thinking-overlay,
+        [class*="enable-extended-and-xl-grid"] thinking-dots-animation,
+        [class*="enable-extended-and-xl-grid"] .response-container-footer {
+            max-width: 100% !important;
+        }
+
+        [class*="enable-extended-and-xl-grid"] message-actions {
+            max-width: 100% !important;
+            margin-inline: 0 !important;
+        }
+
+        /* Gemini UI change (Sep 2026): 4+ column tables are centered via inline padding */
+        .table-block.new-table-style:has(th:nth-child(4), td:nth-child(4)) .table-content,
+        .table-block.new-table-style:has(th:nth-child(4), td:nth-child(4)) .table-footer {
+            padding-inline: 0 !important;
+        }
+
+        /* Gemini UI change (Sep 2026): hide follow-up suggestion buttons */
+        .follow-up-button-container {
+            display: none !important;
         }
 
         @media screen and (min-width: 960px) {
