@@ -61,6 +61,12 @@ function applyWidth(width) {
             z-index: 10 !important;
         }
 
+        /* Gemini UI change (Sep 2026): code block header background */
+        [class*="code-block"] [class*="code-block-decoration"],
+        .code-block-decoration.header-formatted {
+            background-color: transparent !important;
+        }
+
         /* top shadow removal */
         [class*="chat-history-scroll-container"] {
             -webkit-mask-image: none !important;
